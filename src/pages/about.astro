@@ -1,0 +1,266 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "About FloraFusion";
+const pageDescription = "Discover the story behind FloraFusion, where innovative tools and passionate floristry bloom together to empower creators in the floral industry.";
+
+const features = [
+  {
+    icon: "fas fa-lightbulb",
+    title: "Innovative Tools",
+    description: "Cutting-edge technology designed specifically for florists"
+  },
+  {
+    icon: "fas fa-seedling",
+    title: "Natural Beauty",
+    description: "Timeless floral aesthetics integrated with modern design"
+  },
+  {
+    icon: "fas fa-users",
+    title: "Community Driven",
+    description: "A thriving network of passionate florists worldwide"
+  }
+];
+
+const teamMembers = [
+  {
+    name: "Alex Morgan",
+    role: "Founder & CEO",
+    bio: "Passionate florist turned tech entrepreneur"
+  },
+  {
+    name: "Taylor Kim",
+    role: "Lead Designer",
+    bio: "Creative mind behind our beautiful interfaces"
+  },
+  {
+    name: "Jordan Lee",
+    role: "Tech Director",
+    bio: "Building the future of floristry technology"
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section -->
+  <div class="relative bg-gradient-to-br from-[#ff6b35] via-[#ff8c5a] to-[#ff6b35] py-24 overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 left-10 w-32 h-32 rounded-full bg-white"></div>
+      <div class="absolute bottom-20 right-20 w-48 h-48 rounded-full bg-white"></div>
+      <div class="absolute top-1/3 right-1/4 w-24 h-24 rounded-full bg-white"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
+          About <span class="text-yellow-300">FloraFusion</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-white/90 font-light mb-8 max-w-3xl mx-auto">
+          Blooming Innovations for Passionate Florists
+        </p>
+        <div class="w-32 h-1 bg-white mx-auto rounded-full"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Story Section -->
+  <section class="py-20 bg-gradient-to-b from-white to-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="lg:w-1/2">
+          <div class="relative">
+            <div class="absolute -top-6 -left-6 w-full h-full border-4 border-[#1e90ff] rounded-lg"></div>
+            <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-96 flex items-center justify-center">
+              <i class="fas fa-leaf text-8xl text-[#ff6b35]/30"></i>
+            </div>
+          </div>
+        </div>
+        
+        <div class="lg:w-1/2">
+          <h2 class="text-4xl font-bold text-gray-900 mb-6">
+            Our <span class="text-[#ff6b35]">Story</span>
+          </h2>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+            Founded by a team of floral enthusiasts and tech wizards, FloraFusion was born from a simple idea: why should creativity be limited by outdated tools? In 2018, we set out to create a platform that empowers florists to design, manage, and grow their businesses with ease and excitement.
+          </p>
+          <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+            Today, we're a dynamic community hub serving thousands of passionate creators worldwide. Our journey has been fueled by the belief that innovation and natural beauty can coexist beautifully in the floral industry.
+          </p>
+          
+          <div class="flex flex-wrap gap-4">
+            <div class="px-6 py-3 bg-[#1e90ff] text-white rounded-full font-medium">
+              5000+ Florists
+            </div>
+            <div class="px-6 py-3 bg-[#ff6b35] text-white rounded-full font-medium">
+              200+ Countries
+            </div>
+            <div class="px-6 py-3 bg-[#1e90ff] text-white rounded-full font-medium">
+              10 Years Strong
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="py-20 bg-[#f8f9fa]">
+    <div class="container mx-auto px-4">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          What <span class="text-[#ff6b35]">Drives Us</span>
+        </h2>
+        <div class="w-24 h-1 bg-[#1e90ff] mx-auto rounded-full"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+          <div class="w-16 h-16 rounded-full bg-[#ff6b35]/10 flex items-center justify-center mb-6">
+            <i class="fas fa-heart text-3xl text-[#ff6b35]"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Passion for Floristry</h3>
+          <p class="text-gray-700 leading-relaxed">
+            We believe in the transformative power of flowers to bring joy and beauty to people's lives. Every tool we create stems from genuine passion for the craft.
+          </p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+          <div class="w-16 h-16 rounded-full bg-[#1e90ff]/10 flex items-center justify-center mb-6">
+            <i class="fas fa-rocket text-3xl text-[#1e90ff]"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Innovation First</h3>
+          <p class="text-gray-700 leading-relaxed">
+            We're constantly pushing boundaries, integrating new technologies to enhance the floristry experience and make the industry more efficient and exciting.
+          </p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+          <div class="w-16 h-16 rounded-full bg-[#ff6b35]/10 flex items-center justify-center mb-6">
+            <i class="fas fa-handshake text-3xl text-[#ff6b35]"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Community Focus</h3>
+          <p class="text-gray-700 leading-relaxed">
+            Our platform is built by florists, for florists. We prioritize collaboration and knowledge-sharing to create an ecosystem that empowers every creator.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-20 bg-gradient-to-br from-white to-[#fff8f0]">
+    <div class="container mx-auto px-4">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Our <span class="text-[#1e90ff]">Core Values</span>
+        </h2>
+        <p class="text-lg text-gray-700">
+          The pillars that guide our mission to bloom innovative solutions
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {features.map((feature, index) => (
+          <div key={index} class="bg-white p-8 rounded-xl border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 group">
+            <div class="w-16 h-16 rounded-full bg-[#1e90ff]/10 flex items-center justify-center mb-6 group-hover:bg-[#ff6b35]/10 transition-colors duration-300">
+              <i class={`${feature.icon} text-3xl ${index % 2 === 0 ? 'text-[#ff6b35]' : 'text-[#1e90ff]'}`}></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+            <p class="text-gray-700">{feature.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="py-20 bg-gradient-to-b from-[#fff8f0] to-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          <span class="text-[#ff6b35]">Our</span> Leadership Team
+        </h2>
+        <p class="text-lg text-gray-700">
+          Passionate individuals driving the future of floristry
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        {teamMembers.map((member, index) => (
+          <div key={index} class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-3">
+            <div class="h-48 bg-gradient-to-r from-[#ff6b35] to-[#1e90ff] flex items-center justify-center">
+              <div class="bg-gray-200 border-2 border-dashed rounded-xl w-32 h-32 flex items-center justify-center">
+                <i class="fas fa-user text-5xl text-white"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
+              <p class="text-[#ff6b35] font-medium mb-3">{member.role}</p>
+              <p class="text-gray-700">{member.bio}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-[#ff6b35] to-[#1e90ff] text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">
+        Ready to Bloom With <span class="text-yellow-300">FloraFusion</span>?
+      </h2>
+      <p class="text-xl max-w-2xl mx-auto mb-10 text-white/90">
+        Join thousands of florists who are already transforming their businesses with our innovative tools
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <button class="px-8 py-4 bg-white text-[#ff6b35] font-bold rounded-full hover:bg-gray-100 transition-colors duration-300 transform hover:scale-105">
+          Get Started Free
+        </button>
+        <button class="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-[#ff6b35] transition-colors duration-300">
+          Schedule a Demo
+        </button>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .gradient-border {
+    position: relative;
+  }
+  
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #ff6b35, #1e90ff, #ff6b35);
+    z-index: -1;
+    border-radius: 12px;
+    animation: gradientShift 5s linear infinite;
+    background-size: 200% 200%;
+  }
+  
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .hover-transform:hover {
+    transform: translateY(-5px);
+  }
+</style>

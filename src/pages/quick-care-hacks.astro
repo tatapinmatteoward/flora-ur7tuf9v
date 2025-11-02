@@ -1,0 +1,180 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Quick Care Hacks for Thriving Floral Designs";
+const pageDescription = "Discover bold, innovative quick care hacks to keep your floral creations blooming vibrantly longer. Perfect for passionate florists seeking efficient, modern tips to elevate their craft.";
+const hacks = [
+  {
+    id: 1,
+    title: "The Ice Water Wake-Up",
+    description: "Struggling with wilting roses? Chill them out! Submerge your fresh cuts in ice water for 10 minutes right after harvesting. This shocks the stems into better water absorption, mimicking natural dew. Pro tip: Add a crushed aspirin to the mix for anti-bacterial power—your roses will stand tall and bright!",
+    icon: "fas fa-snowflake"
+  },
+  {
+    id: 2,
+    title: "Vinegar & Sugar Vitality",
+    description: "Create a magical potion by mixing 1 tsp of sugar with 2 tbsp of white vinegar in your vase water. The sugar feeds the blooms while the vinegar prevents bacterial growth. It's like giving your flowers a tiny energy drink!",
+    icon: "fas fa-vial"
+  },
+  {
+    id: 3,
+    title: "Copper Coin Cure",
+    description: "Drop a copper coin in each vase – it releases trace minerals that help flowers absorb water more efficiently. Not only does it work, but it also looks absolutely gorgeous in your floral arrangements!",
+    icon: "fas fa-coins"
+  },
+  {
+    id: 4,
+    title: "Trim & Refresh Routine",
+    description: "Every 2 days, trim 1 inch off every stem at an angle under running water. This keeps the stems open for better water uptake. Then refresh the water and add fresh care solution.",
+    icon: "fas fa-cut"
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  {/* Hero Section */}
+  <div class="relative bg-gradient-to-br from-[#ff6b35] via-[#ff8c5a] to-[#ff6b35] py-24 overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 left-10 w-64 h-64 bg-white rounded-full"></div>
+      <div class="absolute bottom-20 right-20 w-48 h-48 bg-white rounded-full"></div>
+      <div class="absolute top-1/3 right-1/4 w-32 h-32 bg-white rounded-full"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">
+          Quick Care Hacks for Thriving Floral Designs
+        </h1>
+        <p class="text-xl md:text-2xl text-white mb-8 opacity-90">
+          Blooming Innovations for Passionate Florists
+        </p>
+        <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto border border-white border-opacity-30">
+          <p class="text-lg text-white">
+            Discover bold, innovative quick care hacks to keep your floral creations blooming vibrantly longer. Perfect for passionate florists seeking efficient, modern tips to elevate their craft.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Introduction Section */}
+  <section class="py-16 bg-gradient-to-b from-white to-[#fef6f2]">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#ff6b35] mb-6">
+          Revive Your Blooms with Quick Care Hacks
+        </h2>
+        <div class="flex justify-center mb-6">
+          <div class="w-24 h-1 bg-[#1e90ff] rounded-full"></div>
+        </div>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          At <span class="font-bold text-[#ff6b35]">FloraFusion</span>, we're all about <span class="font-bold text-[#1e90ff]">blooming innovations</span> that save time and sparkle with energy. As a passionate florist, you know the rush of creating stunning arrangements—but keeping them fresh? That's where our <span class="font-bold text-[#ff6b35]">quick care hacks</span> come in. These bold, modern tips are designed to extend vase life, boost vibrancy, and make your floral magic last. Let's dive into energetic solutions for everyday floral challenges!
+        </p>
+      </div>
+
+      {/* Hack Cards Grid */}
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {hacks.map((hack) => (
+          <div key={hack.id} class="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl border-t-4 border-[#ff6b35]">
+            <div class="p-6 md:p-8">
+              <div class="flex items-start mb-4">
+                <div class="bg-[#ff6b35] text-white p-3 rounded-full mr-4">
+                  <i class={`${hack.icon} text-2xl`}></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mt-1">{hack.title}</h3>
+              </div>
+              <p class="text-gray-600 leading-relaxed">{hack.description}</p>
+            </div>
+            <div class="px-6 py-3 bg-gradient-to-r from-[#ff6b35] to-[#ff8c5a] text-white text-center">
+              <span class="font-semibold">Hack #{hack.id}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Feature Section */}
+  <section class="py-16 bg-gradient-to-r from-[#1e90ff] to-[#4da6ff]">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+          Why These Hacks Work
+        </h2>
+        <div class="flex justify-center mb-6">
+          <div class="w-24 h-1 bg-[#ff6b35] rounded-full"></div>
+        </div>
+        <p class="text-xl text-white opacity-90">
+          Our methods are backed by science and tested by real florists
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-8 text-center border border-white border-opacity-30">
+          <div class="bg-white text-[#1e90ff] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-water text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-4">Enhanced Hydration</h3>
+          <p class="text-white opacity-90">
+            Better water absorption means your flowers stay hydrated longer
+          </p>
+        </div>
+        
+        <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-8 text-center border border-white border-opacity-30">
+          <div class="bg-white text-[#1e90ff] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-bacteria text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-4">Bacterial Prevention</h3>
+          <p class="text-white opacity-90">
+            Natural additives keep harmful bacteria at bay
+          </p>
+        </div>
+        
+        <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-8 text-center border border-white border-opacity-30">
+          <div class="bg-white text-[#1e90ff] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-sun text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-4">Extended Lifespan</h3>
+          <p class="text-white opacity-90">
+            Flowers that bloom brighter and longer than ever before
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* CTA Section */}
+  <section class="py-20 bg-gradient-to-r from-[#ff6b35] to-[#ff8c5a]">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+          Ready to Transform Your Floral Art?
+        </h2>
+        <p class="text-xl text-white mb-10 opacity-90">
+          Join thousands of florists who've revolutionized their workflow with our quick care techniques
+        </p>
+        <button class="bg-white text-[#ff6b35] hover:bg-gray-100 font-bold py-4 px-10 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+          Get Your Free Floral Care Kit
+        </button>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .gradient-text {
+    background: linear-gradient(to right, #ff6b35, #1e90ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>

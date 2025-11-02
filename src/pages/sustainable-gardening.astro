@@ -1,0 +1,181 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Sustainable Gardening: Bloom with Eco-Innovation";
+const pageDescription = "Discover innovative sustainable gardening practices at FloraFusion. Learn how passionate florists can cultivate vibrant blooms while protecting the planet with bold, modern eco-strategies.";
+
+const benefits = [
+  {
+    title: "Environmental Impact",
+    description: "Reduce water waste, minimize chemical use, and combat climate change with regenerative methods.",
+    icon: "fas fa-leaf"
+  },
+  {
+    title: "Cost Savings",
+    description: "Lower long-term expenses on resources while boosting flower quality and yield.",
+    icon: "fas fa-dollar-sign"
+  },
+  {
+    title: "Market Edge",
+    description: "Attract eco-savvy customers who value passionate, sustainable floristry.",
+    icon: "fas fa-users"
+  }
+];
+
+const practices = [
+  {
+    title: "Composting Revolution",
+    description: "Transform garden waste into nutrient-rich soil amendments for thriving blooms."
+  },
+  {
+    title: "Rainwater Harvesting",
+    description: "Collect and utilize natural precipitation for efficient irrigation systems."
+  },
+  {
+    title: "Native Plant Integration",
+    description: "Embrace local flora that naturally thrive with minimal intervention."
+  },
+  {
+    title: "Organic Pest Control",
+    description: "Use beneficial insects and natural remedies to protect your garden."
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section -->
+  <div class="relative bg-gradient-to-br from-[#ff6b35] via-[#ff8c5a] to-[#ff6b35] py-20 md:py-32 overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjEiIGZpbGw9IiNmZmZmZmYiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiLz48L3N2Zz4=')]"></div>
+    </div>
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+          Sustainable Gardening: <span class="block">Bloom with Eco-Innovation</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-white/90 mb-10 max-w-2xl mx-auto">
+          Discover innovative sustainable gardening practices at FloraFusion. Learn how passionate florists can cultivate vibrant blooms while protecting the planet.
+        </p>
+        <button class="bg-white text-[#ff6b35] hover:bg-[#ff8c5a] font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+          Explore Practices
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Benefits Section -->
+  <section class="py-20 bg-gradient-to-b from-white to-[#f8f9fa]">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Why Go Sustainable?</h2>
+        <div class="w-24 h-1 bg-[#ff6b35] mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {benefits.map((benefit, index) => (
+          <div key={index} class="bg-white rounded-2xl shadow-xl p-8 transform transition-all duration-300 hover:-translate-y-2 border border-[#e9ecef] hover:shadow-2xl">
+            <div class="w-16 h-16 rounded-full bg-[#ff6b35]/10 flex items-center justify-center mb-6">
+              <i class={`${benefit.icon} text-2xl text-[#ff6b35]`}></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">{benefit.title}</h3>
+            <p class="text-gray-600 text-lg">{benefit.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Practices Section -->
+  <section class="py-20 bg-gradient-to-br from-[#1e90ff]/5 to-[#ff6b35]/5">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Sustainable Practices</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Bold, energetic techniques that blend modern floristry with environmental stewardship</p>
+        <div class="w-24 h-1 bg-[#ff6b35] mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {practices.map((practice, index) => (
+          <div key={index} class="bg-white rounded-2xl shadow-lg p-8 border border-[#e9ecef] hover:shadow-xl transition-all duration-300">
+            <div class="flex items-start">
+              <div class="mr-6 mt-1">
+                <div class="w-12 h-12 rounded-full bg-[#1e90ff]/10 flex items-center justify-center">
+                  <i class="fas fa-seedling text-xl text-[#1e90ff]"></i>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">{practice.title}</h3>
+                <p class="text-gray-600 text-lg">{practice.description}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-[#ff6b35] to-[#1e90ff]">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Garden?</h2>
+        <p class="text-xl text-white/90 mb-10">Join thousands of passionate florists cultivating a greener future, one bloom at a time.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <button class="bg-white text-[#ff6b35] hover:bg-[#ff8c5a] font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+            Start Your Journey
+          </button>
+          <button class="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full text-lg transition-all duration-300">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="text-6xl text-[#ff6b35]/20 mb-6">❝</div>
+        <blockquote class="text-2xl md:text-3xl font-medium text-gray-800 italic mb-8">
+          "Sustainable gardening isn't just about protecting our planet—it's about creating a legacy of beauty that thrives for generations to come."
+        </blockquote>
+        <p class="text-xl text-gray-600 font-semibold">— FloraFusion Team</p>
+        <div class="w-24 h-1 bg-[#ff6b35] mx-auto mt-8"></div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+  
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .floating {
+    animation: floating 3s ease-in-out infinite;
+  }
+  
+  @keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .pulse {
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 107, 53, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0); }
+  }
+</style>

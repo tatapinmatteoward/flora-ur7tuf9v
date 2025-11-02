@@ -1,0 +1,21 @@
+```astro
+---
+// Frontmatter
+const navItems = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/bloom-trends', label: 'Bloom-Trends' },
+  { href: '/sustainable-gardening', label: 'Sustainable-Gardening' },
+  { href: '/quick-care-hacks', label: 'Quick-Care-Hacks' },
+  { href: '/contact', label: 'Contact' },
+  { href: '/blog', label: 'Blog' }
+];
+---
+
+<nav class="bg-gradient-to-r from-[#ff6b35] to-[#1e90ff] shadow-lg">
+  <div class="container mx-auto px-4 py-4">
+    <div class="flex justify-between items-center">
+      <a href="/" class="text-3xl font-bold text-white hover:text-yellow-200 transition duration-300">FloraFusion</a>
+      
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex gap-6
